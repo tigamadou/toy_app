@@ -5,7 +5,6 @@ AllCops:
     - "config/**/*"
     - "Guardfile"
     - "Rakefile"
-    - "node_modules/**/*"
   DisplayCopNames: true
 
 Metrics/LineLength:
@@ -17,15 +16,23 @@ Metrics/AbcSize:
   Include: ["app/controllers/*"]
   Max: 30
 Metrics/ClassLength:
-  Max: 150
+  Max: 200
 Metrics/BlockLength:
-  ExcludedMethods: ["describe"]
+  ExcludedMethods: ['describe']
+Metrics/PerceivedComplexity:
+  Enabled: false
+Metrics/CyclomaticComplexity:
+  Enabled: false
 
 Style/Documentation:
   Enabled: false
 Style/ClassAndModuleChildren:
   Enabled: false
+Style/CaseEquality:
+  Enabled: false
 
+Layout/AlignHash:
+  EnforcedColonStyle: key
 Layout/ExtraSpacing:
   AllowForAlignment: false
 Layout/MultilineMethodCallIndentation:
